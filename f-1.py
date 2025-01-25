@@ -1,6 +1,7 @@
 def nthfibonacci_number(n):
     if n<=1:
-        print (int(input("fibonacci_number(n-1)+ fibonacci_number(n-2)")))
+        print(int(input("fibonacci_number(n-1)+ fibonacci_number(n-2)")))
+        print(n)
         return n
     i = 0
     j = 1
