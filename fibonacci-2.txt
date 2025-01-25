@@ -1,0 +1,25 @@
+# Press Shift+F10 to execute it or replace it with your code.
+# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# 0,1,2,3,5,8,13,21,34,55
+def print_fibonacci(n):
+    i = 0
+    j = 1
+    k = 0
+    while k<n:
+        print(k)
+        k = i+j
+        i = j
+        j = k
+
+
+def print_even_odd(start_number,max):
+    # Use a breakpoint in the code line below to debug your script.
+    for i in range(start_number,max ,2):
+        print(i)# Press Ctrl+F8 to toggle the breakpoint.
+
+
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    #print_even_odd(1,99)
+    print_fibonacci(5000)
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
