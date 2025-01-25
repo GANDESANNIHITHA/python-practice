@@ -1,0 +1,51 @@
+2.Given an integer array nums,return an array answer such that answer such that answer[i] is equal to the product of all the elements of nums expect nums[i].The product of any prefixs(leetcode:238)
+class Solution {
+    public int[] productExceptSelf(int[] nums) 
+    {
+        int product=1,a=0;
+        for(int i=0;i<nums.length;i++)
+        {
+            if(nums[i]==0)
+            {
+                a++;  // counting number of zeros and skiping them
+                continue;
+            }
+            product=product*nums[i]; //product of array elements
+        }
+//if number of zeros are more than 1 ,then all elements in array will be zero.
+        if(a>1) 
+        {
+            for(int i=0;i<nums.length;i++)
+            {
+                nums[i]=0;
+            }
+            return nums;
+        }
+//if there is one zero, then all elements zero except if nums[i]==0
+        else if(a==1)
+        {
+            for(int i=0;i<nums.length;i++)
+            {
+                if(nums[i]==0)
+                {
+                    //then, nums[i]=product
+                    nums[i]=product;
+                }
+                else
+                {
+                    //otherwise zero.
+                    nums[i]=0;
+                }
+            }
+            return nums;
+        }
+//if there is no zero in the array
+        for(int i=0;i<nums.length;i++)
+        {
+            //dividing product by each element
+            int c=product/nums[i];
+            nums[i]=c;
+        }
+        return nums;
+    }
+}
