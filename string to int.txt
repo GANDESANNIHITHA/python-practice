@@ -1,0 +1,3 @@
+string="12345"
+result=int(string)
+print(result)
